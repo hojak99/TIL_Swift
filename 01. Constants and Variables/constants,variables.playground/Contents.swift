@@ -21,20 +21,20 @@ print("isSuccess : \(isSuccess) \n");
 
 // type annotation
 var str2: String = "Hello, playground"
-print("str2 : \(type(of: str2))")
-print("str2 : \(str2)")
+print("str2 : \(type(of: str2))")               // "str2 : String"
+print("str2 : \(str2)")                         // "str2 : Hello, playground"
 
 var dob2: Double = 0.11;
-print("dob2 : \(type(of: dob2))");
-print("dob2 : \(dob2)");
+print("dob2 : \(type(of: dob2))");              // "dob2 : Double"
+print("dob2 : \(dob2)");                        // "dob2 : 0.11"
 
 let maximum2: Int = 1000
-print("maximum2 : \(type(of: maximum2))");
-print("maximum2 : \(maximum2)");
+print("maximum2 : \(type(of: maximum2))");      // "maximum2 : Int"
+print("maximum2 : \(maximum2)");                // "maximum2 : 1000"
 
 let isSuccess2: Bool = false
-print("isSuccess2 : \(type(of: isSuccess2))");
-print("isSuccess2 : \(isSuccess2)");
+print("isSuccess2 : \(type(of: isSuccess2))");  // "isSuccess2 : Bool"
+print("isSuccess2 : \(isSuccess2)");            // "isSuccess2 : false"
 
 
 
