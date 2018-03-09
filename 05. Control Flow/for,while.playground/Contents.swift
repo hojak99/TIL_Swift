@@ -47,3 +47,9 @@ for tickMark in stride(from: 0, through: minutes, by: minuteInterval) {
     print(tickMark);    // 0, 5, 10, 15, ..... 60
 }
 
+/*
+ 해당 문법은 존재하지 않는다. Swift2 까지는 있었다고 한다.
+ for(int i =0; i<5; ++i) {
+ ....
+ }
+ */
