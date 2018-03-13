@@ -55,9 +55,9 @@ String 값들을 서로 붙일 때 `+` 를 사용하면 새로운 String 값이 
 ### Examples
 ```
 var hihi = "Hello"
-var byebye = "Bye
+var byebye = "Bye"
 
-hihi + bye      // "HelloBye"
+hihi + byebye      // "HelloBye"
 
 var name = "kjh"
 hihi += name    // "Hellokjh"

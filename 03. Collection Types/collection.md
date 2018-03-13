@@ -40,6 +40,6 @@ staData.append("44444")
 strData += ["555"]
 strData += ["77777", "111", "123131"]
 
-strData(0)      // "111"
-strData(0) = "change"       // strData(0)는 이제 "chage" 값이 들어간다
+strData[0]      // "111"
+strData[0] = "change"       // strData(0)는 이제 "chage" 값이 들어간다
 ```
