@@ -33,3 +33,23 @@ book2.bookPrint();
  author : 히가시노 게이고
  */
 book3.bookPrint();
+
+
+var library = BookManager();
+library.registerBook(newBook: book1);
+library.registerBook(newBook: book2);
+library.registerBook(newBook: book3);
+
+// 책에 대한 정보들이 출력된다.
+print(library.showAllBooks());
+print("library count : \(library.countBook())");
+
+var searchResult = library.searchBook(bookName: "나미야 잡화점의 기적");
+
+if searchResult != nil {
+    print("\(searchResult!) 란 책 존재");
+} else {
+    print("책 존재하지 않음");
+}
+
+print(library.removeBook(title: "나미야 잡화점의 기적"));
