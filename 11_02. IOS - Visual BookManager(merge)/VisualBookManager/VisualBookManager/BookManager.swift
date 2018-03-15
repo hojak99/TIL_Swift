@@ -26,9 +26,9 @@ class BookManager {
         // return bookList.description;  다음의 코드는 array  데이터를 출력한다.  Java의 toString() 메소드와 비슷함.
         var strTemp = "";
         for tempBook in bookList {
-            strTemp += "Title : \(tempBook.title)\n";
-            strTemp += "Field : \(tempBook.field)\n";
-            strTemp += "Author : \(tempBook.author)\n";
+            strTemp += "Title : \(tempBook.title!)\n";
+            strTemp += "Field : \(tempBook.field!)\n";
+            strTemp += "Author : \(tempBook.author!)\n";
             strTemp += "-----------------\n";
         }
         return strTemp;
@@ -49,9 +49,9 @@ class BookManager {
         var strTemp = String();
         for tempBook in bookList {
             if tempBook.title == bookName {
-                strTemp += "Title : \(tempBook.title)\n";
-                strTemp += "Field : \(tempBook.field)\n";
-                strTemp += "Author : \(tempBook.author)\n";
+                strTemp += "Title : \(tempBook.title!)\n";
+                strTemp += "Field : \(tempBook.field!)\n";
+                strTemp += "Author : \(tempBook.author!)\n";
                 strTemp += "-----------------\n";
                 return strTemp;
             }
@@ -64,7 +64,7 @@ class BookManager {
      */
     func removeBook(title: String) -> String {
         for (index, value) in bookList.enumerated() {
-            if value.title == title {
+            if value.title! == title {
                 bookList.remove(at: index);
                 return "[\(title)] 이란 책을 삭제했습니다."
             }

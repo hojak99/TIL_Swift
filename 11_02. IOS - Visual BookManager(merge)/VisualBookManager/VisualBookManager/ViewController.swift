@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     var library = BookManager();
 
     @IBOutlet weak var outputTextView: UITextView!;
+  
+    @IBOutlet weak var titleTextField: UITextField!;
+    @IBOutlet weak var fieldTextField: UITextField!;
+    @IBOutlet weak var authorTextField: UITextField!;
     
     /*
         초기화 코드 작성하는 메소드
@@ -34,6 +38,18 @@ class ViewController: UIViewController {
     @IBAction func showAllBooksAction(_ sender : Any) {
 //        print("showAllBooksAction");
         outputTextView.text = library.showAllBooks();
+    }
+    
+    // 인터페이스 빌더와 연결하기 위해서 해당 어노테이션 사용해야함
+    // "IBAction" 에서 IB 는 "인터페이스 빌더"의 약자
+    @IBAction func registerAction(_ sender : Any) {
+        var tempBook = Book();
+        
+        tempBook.title = titleTextField.text!;
+        tempBook.field = fieldTextField.text!;
+        tempBook.author = authorTextField.text!;
+        
+        library.registerBook(newBook: tempBook);
     }
     
     override func didReceiveMemoryWarning() {
