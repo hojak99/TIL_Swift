@@ -93,6 +93,9 @@
                                 <state key="normal" title="remove">
                                     <color key="titleShadowColor" red="1" green="0.28059228670000003" blue="0.2151397478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="removeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAI-TA-SkY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZW2-NX-v8p">
                                 <rect key="frame" x="63" y="312" width="86" height="43"/>
