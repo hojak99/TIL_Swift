@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     var library = BookManager();
 
+    @IBOutlet weak var outputTextView: UITextView!;
     
     /*
         초기화 코드 작성하는 메소드
@@ -28,10 +29,11 @@ class ViewController: UIViewController {
     }
     
     /*
-        버튼 클릭 시 드 이벤트 메소드
- 드   */
+        버튼 클릭 시 발생하는 이벤트 메소드
+     */
     @IBAction func showAllBooksAction(_ sender : Any) {
-        print("showAllBooksAction");
+//        print("showAllBooksAction");
+        outputTextView.text = library.showAllBooks();
     }
     
     override func didReceiveMemoryWarning() {
