@@ -25,7 +25,13 @@ class ViewController: UIViewController {
         library.registerBook(newBook: book1);
         library.registerBook(newBook: book2);
         library.registerBook(newBook: book3);
-
+    }
+    
+    /*
+        버튼 클릭 시 드 이벤트 메소드
+ 드   */
+    @IBAction func showAllBooksAction(_ sender : Any) {
+        print("showAllBooksAction");
     }
     
     override func didReceiveMemoryWarning() {
