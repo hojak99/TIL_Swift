@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!;
     @IBOutlet weak var fieldTextField: UITextField!;
     @IBOutlet weak var authorTextField: UITextField!;
+    @IBOutlet weak var countLabel: UILabel!;
     
     /*
         초기화 코드 작성하는 메소드
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
         library.registerBook(newBook: book1);
         library.registerBook(newBook: book2);
         library.registerBook(newBook: book3);
+        countLabel.text = "\(library.countBook())";
     }
     
     /*
@@ -50,6 +52,20 @@ class ViewController: UIViewController {
         tempBook.author = authorTextField.text!;
         
         library.registerBook(newBook: tempBook);
+        
+        countLabel.text = "\(library.countBook())";
+        outputTextView.text = "책이 생성되었습니다.";
+    }
+    
+    @IBAction func searchAction(_ sender : Any) {
+        let title = titleTextField.text!;
+        let resultBook = library.searchBook(bookName: title);
+        
+        if resultBook != nil {
+            outputTextView.text = resultBook;
+        } else {
+            outputTextView.text = "Notting";
+        }
     }
     
     override func didReceiveMemoryWarning() {

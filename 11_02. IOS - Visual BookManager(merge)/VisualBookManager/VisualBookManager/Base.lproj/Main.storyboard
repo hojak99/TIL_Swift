@@ -101,6 +101,9 @@
                                 <state key="normal" title="search">
                                     <color key="titleShadowColor" red="1" green="0.28059228670000003" blue="0.2151397478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zc6-Zo-FoK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4b-Fc-a07">
                                 <rect key="frame" x="63" y="374" width="274" height="30"/>
@@ -131,6 +134,7 @@
                     </view>
                     <connections>
                         <outlet property="authorTextField" destination="eKi-6z-RDl" id="lHM-8k-A1g"/>
+                        <outlet property="countLabel" destination="cGo-cw-IOm" id="6Cz-d1-Bmp"/>
                         <outlet property="fieldTextField" destination="jz0-l8-jH5" id="1Ap-Xa-nZa"/>
                         <outlet property="outputTextView" destination="7AG-o4-QhE" id="Li6-Qs-nhA"/>
                         <outlet property="titleTextField" destination="ELT-jG-aOp" id="DdJ-0K-wt8"/>
