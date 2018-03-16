@@ -14,3 +14,9 @@ iOS or tvOS 앱을 위한 graphic과 event-driven 사용자 인터페이스를 �
 
 # UIImage
 해당 객체에서는 앱의 image 데이터를 관리한다. 그리고 image 객체는 immutable 하다.
+
+# Protocol
+프로토콜은 특정 작업이나 기능에 적합한 메소드, 프로퍼티나 다른 요구사항들의 blueprint를 정의한다.   
+
+# Delegation
+Delegation 은 클래스 또는 structure 가 책임의 일부를 다른 타입의 인스턴스로 넘겨주는 디자인 패턴이다.
