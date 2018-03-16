@@ -14,9 +14,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let arrImage = [
+            UIImage(named: "01.jpg")!,
+            UIImage(named: "02.jpg")!,
+            UIImage(named: "03.jpg")!,
+            UIImage(named: "04.jpg")!,
+            UIImage(named: "05.jpg")!
+        ];
+        
+        imgView.animationImages = arrImage;
+        imgView.animationDuration = 7;
+        
     }
 
+    @IBAction func toggleButton(_ sender : Any) {
+        if imgView.isAnimating == true {
+            imgView.stopAnimating();
+        } else {
+            imgView.startAnimating();
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
