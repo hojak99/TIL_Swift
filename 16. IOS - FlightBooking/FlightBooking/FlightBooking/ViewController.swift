@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var departureDateButton: UIButton!;
+    @IBOutlet weak var returnDateLabel: UILabel!;
+    @IBOutlet weak var returnDateButton: UIButton!;
+    @IBOutlet weak var selectDatePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +25,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func showDatePickerAction(_ sender: Any) {
+    }
+   
+    @IBAction func showReturnDateAction(_ sender: Any) {
+    }
+    
+    @IBAction func selectedDateAction(_ sender: Any) {
+    }
+    
+    
 }
 
