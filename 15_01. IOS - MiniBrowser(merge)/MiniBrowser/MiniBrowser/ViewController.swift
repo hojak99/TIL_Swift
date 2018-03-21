@@ -74,6 +74,23 @@ class ViewController: UIViewController, UITextFieldDelegate, WKNavigationDelegat
     
     @IBAction func goBackAction(_ sender: Any) {
         mainWebView.goBack();
+        
+        let url = String(describing:mainWebView.url!);
+        urlTextField.text = url;
+        
+        if url.contains("facebook") == true {
+            print("gdg");
+            bookMarkSegmentControl.selectedSegmentIndex = 0;
+        } else if url.contains("twitter") == true {
+            bookMarkSegmentControl.selectedSegmentIndex = 1;
+        } else if url.contains("apple") == true {
+            bookMarkSegmentControl.selectedSegmentIndex = 2;
+        } else if url.contains("google") == true {
+            bookMarkSegmentControl.selectedSegmentIndex = 3;
+        } else {
+            bookMarkSegmentControl.selectedSegmentIndex = UISegmentedControlNoSegment;
+        }
+        
     }
     
     @IBAction func goFowardAction(_ sender: Any) {
