@@ -80,7 +80,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WKNavigationDelegat
         
         if url.contains("facebook") == true {
             print("gdg");
-            bookMarkSegmentControl.selectedSegmentIndex = 0;
+            bookMarkSegmentControl.selectedSegmentIndeÅx = 0;
         } else if url.contains("twitter") == true {
             bookMarkSegmentControl.selectedSegmentIndex = 1;
         } else if url.contains("apple") == true {
