@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let initUrl = "http://www.facebook.com";
+        let url = URL(string: initUrl);
+        let request = URLRequest(url: url!);
+        mainWebView.load(request);
     }
 
     override func didReceiveMemoryWarning() {
