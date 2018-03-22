@@ -64,8 +64,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-9g-56T">
-                                <rect key="frame" x="217" y="201" width="97" height="30"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-9g-56T">
+                                <rect key="frame" x="217" y="201" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.85070186371159173" blue="0.20104145364853532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Select Date"/>
@@ -73,21 +73,15 @@
                                     <action selector="showDatePickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KE-o9-mF6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0N-bK-NNe">
-                                <rect key="frame" x="217" y="343" width="97" height="30"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0N-bK-NNe">
+                                <rect key="frame" x="217" y="343" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.8507018637" blue="0.2010414536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Select Date"/>
-                            </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d8G-bc-Ik1">
-                                <rect key="frame" x="241" y="263" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" red="0.0" green="1" blue="0.48989321609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="showReturnDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="JQN-xl-pau"/>
+                                    <action selector="showDatePickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsb-Gu-dqT"/>
                                 </connections>
-                            </switch>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhH-CU-1JH">
                                 <rect key="frame" x="138" y="428" width="138" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -105,6 +99,15 @@
                                     <action selector="selectedDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="h2L-Vk-6d7"/>
                                 </connections>
                             </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d8G-bc-Ik1">
+                                <rect key="frame" x="287" y="263" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.0" green="1" blue="0.48989321609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="showReturnDateAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="JQN-xl-pau"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

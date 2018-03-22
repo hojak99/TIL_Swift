@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var returnDateButton: UIButton!;
     @IBOutlet weak var selectDatePicker: UIDatePicker!
     
+    var buttonTag: Int = 1;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -28,13 +30,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func showDatePickerAction(_ sender: Any) {
+    @IBAction func showDatePickerAction(_ sender: UIButton) {
        
         if selectDatePicker.isHidden == false {
             selectDatePicker.isHidden = true;
         } else {
             selectDatePicker.isHidden = false;
         }
+        buttonTag = sender.tag;
     }
    
     // (_ sender: UISwitch) 로도 가능
@@ -61,10 +64,23 @@ class ViewController: UIViewController {
 //        }
     }
     
-    @IBAction func selectedDateAction(_ sender: Any) {
-        departureDateButton.setTitle("hello", for: UIControlState.normal)
+    @IBAction func selectedDateAction(_ sender: UIDatePicker) {
+        let formatter = DateFormatter();
+        formatter.dateFormat = "YY-MM-d hh:mma";
+        
+        let dateString = formatter.string(from: sender.date);
+        print(dateString);
+        
+        if buttonTag == 1 {
+            departureDateButton.setTitle(dateString, for: UIControlState.normal);
+        } else {
+            returnDateButton.setTitle(dateString, for: UIControlState.normal)
+        }
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true);
+        selectDatePicker.isHidden = true;
+    }
 }
 
