@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        imageView.layer.cornerRadius = 20.0;
+        imageView.layer.masksToBounds = true;
     }
 
     override func didReceiveMemoryWarning() {
