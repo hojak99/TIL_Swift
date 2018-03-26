@@ -20,12 +20,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     let human = ["man", "girl"];
     
     let animalImageNames = ["02.jpg","01.jpg", "04.jpg", "03.jpg"];
-    let humanImageNames = ["06.jpg"];
+    let humanImageNames = ["06.jpg", "06.jpg"];
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        
+        modelImage = humanImageNames;
         model = human;
+        imageView.image = UIImage(named: modelImage[0]);
+        
         imageView.layer.cornerRadius = 50.0;
         imageView.layer.masksToBounds = true;
     }
@@ -44,6 +48,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return 2;
     }
     
+    /*
+        선택되기 전 셋팅
+     */
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
             // 첫 번째 component 에는 groupName 배열의 값이 들어감
@@ -54,6 +61,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
+    /*
+        선택되기 전 셋팅
+     */
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
             return groupName.count;
@@ -62,14 +72,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
+    /*
+        선택되고 난 후 component 값 변경되도록
+     */
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0 && row == 0 {
             model = human;
+            modelImage = humanImageNames;
         } else if component == 0 && row == 1 {
             model = animal;
+            modelImage = animalImageNames;
         }
         
         pickerView.reloadAllComponents();
+        
+//        print(modelImage);
+//        print(pickerView.selectedRow(inComponent: 1));
+        imageView.image = UIImage(named: modelImage[pickerView.selectedRow(inComponent: 1)]);
     }
 }
 
