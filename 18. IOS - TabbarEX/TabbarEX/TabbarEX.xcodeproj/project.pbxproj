@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5F8F2C692069CF0000C0BAA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F2C682069CF0000C0BAA3 /* AppDelegate.swift */; };
-		5F8F2C6B2069CF0000C0BAA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F2C6A2069CF0000C0BAA3 /* ViewController.swift */; };
 		5F8F2C6E2069CF0000C0BAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F2C6C2069CF0000C0BAA3 /* Main.storyboard */; };
 		5F8F2C702069CF0000C0BAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F2C6F2069CF0000C0BAA3 /* Assets.xcassets */; };
 		5F8F2C732069CF0000C0BAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F2C712069CF0000C0BAA3 /* LaunchScreen.storyboard */; };
+		5F8F2C7B2069D22E00C0BAA3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F2C7A2069D22E00C0BAA3 /* FirstViewController.swift */; };
+		5F8F2C7D2069D41F00C0BAA3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F2C7C2069D41F00C0BAA3 /* SecondViewController.swift */; };
+		5F8F2C7F2069D58800C0BAA3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F2C7E2069D58800C0BAA3 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F8F2C652069CF0000C0BAA3 /* TabbarEX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarEX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8F2C682069CF0000C0BAA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F8F2C6A2069CF0000C0BAA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F8F2C6D2069CF0000C0BAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F8F2C6F2069CF0000C0BAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F8F2C722069CF0000C0BAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F8F2C742069CF0000C0BAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8F2C7A2069D22E00C0BAA3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		5F8F2C7C2069D41F00C0BAA3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5F8F2C7E2069D58800C0BAA3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				5F8F2C682069CF0000C0BAA3 /* AppDelegate.swift */,
-				5F8F2C6A2069CF0000C0BAA3 /* ViewController.swift */,
 				5F8F2C6C2069CF0000C0BAA3 /* Main.storyboard */,
 				5F8F2C6F2069CF0000C0BAA3 /* Assets.xcassets */,
+				5F8F2C7A2069D22E00C0BAA3 /* FirstViewController.swift */,
 				5F8F2C712069CF0000C0BAA3 /* LaunchScreen.storyboard */,
 				5F8F2C742069CF0000C0BAA3 /* Info.plist */,
+				5F8F2C7C2069D41F00C0BAA3 /* SecondViewController.swift */,
+				5F8F2C7E2069D58800C0BAA3 /* ThirdViewController.swift */,
 			);
 			path = TabbarEX;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8F2C6B2069CF0000C0BAA3 /* ViewController.swift in Sources */,
+				5F8F2C7D2069D41F00C0BAA3 /* SecondViewController.swift in Sources */,
 				5F8F2C692069CF0000C0BAA3 /* AppDelegate.swift in Sources */,
+				5F8F2C7F2069D58800C0BAA3 /* ThirdViewController.swift in Sources */,
+				5F8F2C7B2069D22E00C0BAA3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
