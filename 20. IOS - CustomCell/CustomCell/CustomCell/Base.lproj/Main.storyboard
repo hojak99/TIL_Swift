@@ -86,7 +86,7 @@
                                             <outlet property="imgView" destination="6Z1-8S-WPx" id="I6y-W2-fC6"/>
                                             <outlet property="nameLabel" destination="LMy-TA-KHa" id="XBA-r2-SGy"/>
                                             <outlet property="valueLabel" destination="FP2-OK-CoF" id="e4M-Wj-gmw"/>
-                                            <segue destination="M9O-kC-AsX" kind="show" id="nR2-X0-eua"/>
+                                            <segue destination="M9O-kC-AsX" kind="show" identifier="showDetail" id="nR2-X0-eua"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,15 +100,18 @@
                         <viewLayoutGuide key="safeArea" id="f8I-UP-lI0"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Dl-zf-kAs"/>
+                    <connections>
+                        <outlet property="tableView" destination="P7C-2a-lM5" id="Meg-up-3r4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxN-bP-BMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1305.7971014492755" y="169.56521739130437"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="TIH-LF-13U">
             <objects>
-                <viewController id="M9O-kC-AsX" sceneMemberID="viewController">
+                <viewController id="M9O-kC-AsX" customClass="DetailViewController" customModule="CustomCell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VX4-hv-QmX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +152,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tse-MQ-43x"/>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="hIq-Dw-vWf" id="JaE-Qg-uBl"/>
+                        <outlet property="imgView" destination="f6t-qa-DFp" id="maa-MF-3bH"/>
+                        <outlet property="nameLabel" destination="pMs-Lo-9d9" id="Vbg-sB-1gc"/>
+                        <outlet property="valueLabel" destination="QhD-Uj-gHZ" id="QL7-8c-dbx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0w-73-21M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
     var itemList = [[String:String]]();
     
     override func viewDidLoad() {
@@ -42,11 +43,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.valueLabel.text = dicTemp["value"];
         
         cell.imgView.image = UIImage(named:dicTemp["image"]!);
+    
         return cell;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemList.count;
+    }
+    
+    // 페이지 넘어갈 때 자동으로 호출됨.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            (segue.destination as! DetailViewController).detailData = itemList[tableView.indexPathForSelectedRow!.row];
+        }
     }
 }
 

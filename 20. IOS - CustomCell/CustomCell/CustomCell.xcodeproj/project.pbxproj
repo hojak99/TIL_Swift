@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F181FFF206C6FCD00D55EB9 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F181FFE206C6FCD00D55EB9 /* CustomCell.swift */; };
+		5F182001206C9FAD00D55EB9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F182000206C9FAD00D55EB9 /* DetailViewController.swift */; };
 		5F549BD6206B26A200B37BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F549BD5206B26A200B37BAF /* AppDelegate.swift */; };
 		5F549BD8206B26A200B37BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F549BD7206B26A200B37BAF /* ViewController.swift */; };
 		5F549BDB206B26A200B37BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F549BD9206B26A200B37BAF /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		5F181FFE206C6FCD00D55EB9 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		5F182000206C9FAD00D55EB9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5F549BD2206B26A100B37BAF /* CustomCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F549BD5206B26A200B37BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F549BD7206B26A200B37BAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				5F549BDE206B26A200B37BAF /* LaunchScreen.storyboard */,
 				5F549BE1206B26A200B37BAF /* Info.plist */,
 				5F181FFE206C6FCD00D55EB9 /* CustomCell.swift */,
+				5F182000206C9FAD00D55EB9 /* DetailViewController.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				5F549BD8206B26A200B37BAF /* ViewController.swift in Sources */,
 				5F181FFF206C6FCD00D55EB9 /* CustomCell.swift in Sources */,
 				5F549BD6206B26A200B37BAF /* AppDelegate.swift in Sources */,
+				5F182001206C9FAD00D55EB9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
