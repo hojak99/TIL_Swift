@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F181FFF206C6FCD00D55EB9 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F181FFE206C6FCD00D55EB9 /* CustomCell.swift */; };
 		5F549BD6206B26A200B37BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F549BD5206B26A200B37BAF /* AppDelegate.swift */; };
 		5F549BD8206B26A200B37BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F549BD7206B26A200B37BAF /* ViewController.swift */; };
 		5F549BDB206B26A200B37BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F549BD9206B26A200B37BAF /* Main.storyboard */; };
@@ -15,9 +16,11 @@
 		5F549BEB206B296E00B37BAF /* weather_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F549BE8206B296E00B37BAF /* weather_01.jpeg */; };
 		5F549BEC206B296E00B37BAF /* weather_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F549BE9206B296E00B37BAF /* weather_02.jpg */; };
 		5F549BED206B296E00B37BAF /* weather_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F549BEA206B296E00B37BAF /* weather_03.jpg */; };
+		5F549BEF206B2F5A00B37BAF /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F549BEE206B2F5A00B37BAF /* 03.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F181FFE206C6FCD00D55EB9 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		5F549BD2206B26A100B37BAF /* CustomCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F549BD5206B26A200B37BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F549BD7206B26A200B37BAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		5F549BE8206B296E00B37BAF /* weather_01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = weather_01.jpeg; path = ../../../../../../../Downloads/weather_01.jpeg; sourceTree = "<group>"; };
 		5F549BE9206B296E00B37BAF /* weather_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = weather_02.jpg; path = ../../../../../../../Downloads/weather_02.jpg; sourceTree = "<group>"; };
 		5F549BEA206B296E00B37BAF /* weather_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = weather_03.jpg; path = ../../../../../../../Downloads/weather_03.jpg; sourceTree = "<group>"; };
+		5F549BEE206B2F5A00B37BAF /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 03.jpg; path = ../../../../../../../Downloads/03.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				5F549BDC206B26A200B37BAF /* Assets.xcassets */,
 				5F549BDE206B26A200B37BAF /* LaunchScreen.storyboard */,
 				5F549BE1206B26A200B37BAF /* Info.plist */,
+				5F181FFE206C6FCD00D55EB9 /* CustomCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 		5F549BE7206B295600B37BAF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				5F549BEE206B2F5A00B37BAF /* 03.jpg */,
 				5F549BE8206B296E00B37BAF /* weather_01.jpeg */,
 				5F549BE9206B296E00B37BAF /* weather_02.jpg */,
 				5F549BEA206B296E00B37BAF /* weather_03.jpg */,
@@ -140,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F549BEF206B2F5A00B37BAF /* 03.jpg in Resources */,
 				5F549BE0206B26A200B37BAF /* LaunchScreen.storyboard in Resources */,
 				5F549BED206B296E00B37BAF /* weather_03.jpg in Resources */,
 				5F549BEC206B296E00B37BAF /* weather_02.jpg in Resources */,
@@ -157,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F549BD8206B26A200B37BAF /* ViewController.swift in Sources */,
+				5F181FFF206C6FCD00D55EB9 /* CustomCell.swift in Sources */,
 				5F549BD6206B26A200B37BAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
