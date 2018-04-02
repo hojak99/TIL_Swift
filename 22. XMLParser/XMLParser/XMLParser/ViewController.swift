@@ -8,14 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, XMLParserDelegate {
 
     var dataList = [[String:String]]();
     var detailData = [String:String]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let urlString = "https://raw.githubusercontent.com/ChoiJinYoung/iphonewithswift2/master/weather.xml";
+        
+        guard let baseURL = URL(string: urlString) else {
+            print("URL error");
+            return;
+        }
+        
+        guard let parser = XMLParser(contentsOf: baseURL) else {
+            print("Can't read data");
+            return;
+        }
+        
+        parser.delegate = self;
+        
+        // 해당 메소드를 호출해야 파싱한다.
+        if !parser.parse() {
+            print("Parse failure");
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,6 +63,21 @@ class ViewController: UIViewController, UITableViewDataSource {
             cell.imgView.image = UIImage(named: "weather_02.jpg");
         }
         
+        return cell;
+    }
+    
+    
+    // 
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        print("didStartElement : \(elementName)");
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        print("foundCharacters : \(string)");
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        print("didEndElement : \(elementName)");
     }
 }
 
