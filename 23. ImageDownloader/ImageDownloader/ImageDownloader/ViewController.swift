@@ -30,13 +30,19 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         let tempData:Data = try! Data(contentsOf: location);
         self.imgView.image = UIImage(data: tempData);
+        
+        indicatorView.stopAnimating();
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        
+        let progress:Float = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite);
+        self.progressView.setProgress(progress, animated: true);
     }
 
     @IBAction func downloadAction(_ sender: Any) {
+        imgView.image = nil;
+        indicatorView.startAnimating();
+        
         let sessionConfiguration = URLSessionConfiguration.default;
         let session = URLSession(configuration: sessionConfiguration, delegate: self, delegateQueue: OperationQueue.main);
         
