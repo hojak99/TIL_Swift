@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, XMLParserDelegate
 
     var dataList = [[String:String]]();
     var detailData = [String:String]();
+    var elementTemp: String = "";
+    var blank: Bool = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, XMLParserDelegate
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0;
+        return dataList.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,18 +68,28 @@ class ViewController: UIViewController, UITableViewDataSource, XMLParserDelegate
         return cell;
     }
     
+    // <a> 안녕 </a>
     
-    // 
+    // a
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        print("didStartElement : \(elementName)");
+        elementTemp = elementName;
+        blank = true;
+        
     }
     
+    // 태그 안에 있는 값 : 안녕
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        print("foundCharacters : \(string)");
+        if blank == true && elementTemp != "local" && elementTemp != "weatherinfo" {
+            detailData[elementTemp] = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines);
+        }
     }
     
+    // a
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        print("didEndElement : \(elementName)");
+        if elementName == "local" {
+            dataList += [detailData]
+        }
+        blank = false;
     }
 }
 
