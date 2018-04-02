@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, URLSessionDownloadDelegate {
 
     
-    @IBOutlet weak var imgView: UIActivityIndicatorView!
+    @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -28,7 +28,8 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        
+        let tempData:Data = try! Data(contentsOf: location);
+        self.imgView.image = UIImage(data: tempData);
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
