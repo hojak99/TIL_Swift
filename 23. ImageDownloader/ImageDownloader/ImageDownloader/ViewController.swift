@@ -46,7 +46,14 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         let sessionConfiguration = URLSessionConfiguration.default;
         let session = URLSession(configuration: sessionConfiguration, delegate: self, delegateQueue: OperationQueue.main);
         
-        downloadTask = session.downloadTask(with: URL(string: "https://raw.githubusercontent.com/ChoiJinYoung/iphonewithswift2/master/sample.jpeg")!);
+        // adownloadTask = session.downloadTask(with: URL(string: "https://raw.githubusercontent.com/ChoiJinYoung/iphonewithswift2/master/sample.jpeg")!);
+        
+        downloadTask = session.downloadTask(with: URL(string: "https://raw.githubusercontent.com/ChoiJinYoung/iphonewithswift2/master/sample.jpeg")!, completionHandler: {(data, response, error) -> Void in
+            let tempData:Data = try! Data(contentsOf: data!);
+            self.imgView.image = UIImage(data: tempData);
+            
+            self.indicatorView.stopAnimating();
+        })
         
         // 해담 메소드를 호출해야 작업을 시작한다.
         downloadTask.resume();
