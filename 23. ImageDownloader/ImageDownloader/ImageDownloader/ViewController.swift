@@ -53,11 +53,16 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     }
 
     @IBAction func suspendAction(_ sender: Any) {
+        downloadTask.suspend();
     }
     @IBAction func resumeAction(_ sender: Any) {
+        downloadTask.resume();
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        downloadTask.cancel();
+        progressView.setProgress(0.0, animated: false);
+        indicatorView.stopAnimating();
     }
 }
 
